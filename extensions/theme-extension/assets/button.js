@@ -1,4 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
+import {createClient} from '../../../app/client';
+import Shopify from "@shopify/shopify-api";
+import { updateProductRatings } from '../../../app/routes/update-metaobject';
+
+const session = await Shopify.Utils.loadOfflineSession(shop);
+const client = createClient(session.shop, session.accessToken);
+
+document.addEventListener("DOMContentLoaded", async function () {
+  await updateProductRatings(client, productGid, newRatings);
     document.getElementById("buy-with-tokens").addEventListener("click", function() {
       // Storefront API kullanarak Metafield Güncelleme isteği
 
