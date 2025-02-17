@@ -1,5 +1,9 @@
 import "isomorphic-fetch";
 import { gql } from "apollo-boost";
+import { createClient } from "./client";
+
+
+
 
 const PRIVATE_METAFIELD_UPSERT = gql`
 mutation UpdateMetaobject($id: ID!, $metaobject: MetaobjectUpdateInput!) {
@@ -37,3 +41,8 @@ export const updateProductRatings = async (client, productGid, ratings) => {
     },
   });
 };
+
+const session = await Shopify.Utils.loadOfflineSession(shop);
+const client = createClient(session.shop, session.accessToken);
+
+await updateProductRatings(client, productGid, newRatings);
