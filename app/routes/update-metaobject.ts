@@ -27,7 +27,7 @@ export const action: ActionFunction = async ({ request }) => {
         const response = await fetch(`https://${API_KEY}:${PASSWORD}@${SHOP_NAME}.myshopify.com/admin/api/2024-04/graphql.json`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "alperen",
                 "X-Shopify-Access-Token": "8e99c6861e1c6778f425634dd75cec70"
             },
             body: JSON.stringify({
