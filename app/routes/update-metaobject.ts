@@ -17,7 +17,7 @@ export const action: ActionFunction = async ({ request }) => {
         const { metafieldId, newPoints } = await request.json();
         console.log("📡 Gönderilen Veriler:", { metafieldId, newPoints });
 
-        const response = await fetch(`https://${session.shop}/admin/api/2024-04/graphql.json`, {
+        const response = await fetch(`https://test-botano.myshopify.com/admin/api/2024-04/graphql.json`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
