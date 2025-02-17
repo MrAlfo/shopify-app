@@ -36,6 +36,7 @@ export default function Auth() {
   const [shop, setShop] = useState("");
   const { errors } = actionData || loaderData;
 
+  console.log('Api çağırılabilir');
   return (
     <PolarisAppProvider i18n={loaderData.polarisTranslations}>
       <Page>

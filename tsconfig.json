@@ -1,5 +1,5 @@
 {
-  "include": ["env.d.ts", "**/*.ts", "**/*.tsx", "app/routes/api/update-metaobject.ts"],
+  "include": ["env.d.ts", "**/*.ts", "**/*.tsx", "app/routes/update-metaobject.ts"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "strict": true,
