@@ -1,0 +1,37 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "8e99c6861e1c6778f425634dd75cec70"
+application_url = "https://discovery-guards-trackback-strings.trycloudflare.com"
+embedded = true
+name = "discount-extension"
+handle = "discount-extension-21"
+
+[webhooks]
+api_version = "2025-01"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_metaobjects, write_metaobjects"
+
+[auth]
+redirect_urls = [
+  "https://discovery-guards-trackback-strings.trycloudflare.com/auth/callback",
+  "https://discovery-guards-trackback-strings.trycloudflare.com/auth/shopify/callback",
+  "https://discovery-guards-trackback-strings.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
+
+[build]
+dev_store_url = "test-botano.myshopify.com"
+automatically_update_urls_on_dev = true
+include_config_on_deploy = true

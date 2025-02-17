@@ -1,0 +1,25 @@
+<script src="{{ 'button.js' | asset_url }}" defer></script>
+<script src="{{ 'token-button.js' | asset_url }}" defer></script>
+<button
+  id="buy-with-tokens"
+  data-variant-id="{{ product.variants.first.id }}"
+  style="background: #FFD700; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px;">
+  Buy with Tokens4
+</button>
+
+<p>Kullanıcı: {{ shop.metaobjects["point_calculate"]["point-calculate-qdlhd2ug"].customer.value }}</p>
+<p>Puan: <span id="userPoints">{{ shop.metaobjects["point_calculate"]["point-calculate-qdlhd2ug"].point.value }}</span></p>
+
+
+
+{% schema %}
+{
+  "name": "Token Button",
+  "target": "section",
+  "settings": [
+    { "type": "product", "id": "product", "label": "product", "autofill": true },
+    { "type": "color", "id": "colour", "label": "Star Colour", "default": "#ff0000" }
+  ]
+}
+{% endschema %}
+
