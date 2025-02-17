@@ -28,7 +28,7 @@ export const action: ActionFunction = async ({ request }) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "X-Shopify-Access-Token": "shpat_1234567890abcdefghijklmnopqrstuvwxyz"
+                "X-Shopify-Access-Token": "8e99c6861e1c6778f425634dd75cec70"
             },
             body: JSON.stringify({
                 query: `
