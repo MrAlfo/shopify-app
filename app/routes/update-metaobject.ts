@@ -5,13 +5,13 @@ import type { ActionFunction } from "@remix-run/node";
 
 
 export const action: ActionFunction = async ({ request }) => {
-    const { session } = await authenticate.admin(request);
+    // const { session } = await authenticate.admin(request);
 
-    if (!session) {
-        return json({ error: "Unauthorized" }, { status: 401 });
-    }
+    // if (!session) {
+    //     return json({ error: "Unauthorized" }, { status: 401 });
+    // }
     
-    console.log("Session basarıyla alınıd:", session)
+    // console.log("Session basarıyla alınıd:", session)
     try {
         const { metafieldId, newPoints } = await request.json();
 
