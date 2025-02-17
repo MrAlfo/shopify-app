@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch("/apps/api/update-metaobject", {  // Shopify Proxy URL
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "X-Shopify-Access-Token": "shpat_1234567890abcdefghijklmnopqrstuvwxyz"
             },
             credentials: "include",
             body: JSON.stringify({
