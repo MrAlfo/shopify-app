@@ -3,9 +3,6 @@ import { authenticate } from "../shopify.server";
 
 import type { ActionFunction } from "@remix-run/node";
 
-export const loader = async () => {
-    return json({ message: "API Çalışıyor!!" });
-};
 
 export const action: ActionFunction = async ({ request }) => {
     const { session } = await authenticate.admin(request);
@@ -14,7 +11,7 @@ export const action: ActionFunction = async ({ request }) => {
         return json({ error: "Unauthorized" }, { status: 401 });
     }
     
-
+    console.log("Session basarıyla alınıd:", session)
     try {
         const { metafieldId, newPoints } = await request.json();
 

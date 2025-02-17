@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Shopify App Proxy'ye istek gönder
-        const response = await fetch("/apps/update-metaobject", { 
+        const response = await fetch("/apps/api/update-metaobject", { 
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
